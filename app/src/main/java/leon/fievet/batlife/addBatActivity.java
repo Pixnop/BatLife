@@ -51,6 +51,4 @@ public class addBatActivity extends AppCompatActivity {
         bitmap.setPixels(pixels, 0, 500, 0, 0, bitMatrix.getWidth(), bitMatrix.getHeight());
         qrCodeIV.setImageBitmap(bitmap);
     }
-
-
 }

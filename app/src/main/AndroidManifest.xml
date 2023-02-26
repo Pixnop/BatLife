@@ -12,9 +12,12 @@
         android:theme="@style/Theme.BatLife"
         tools:targetApi="31">
         <activity
-            android:name=".updateBatActivity"
+            android:name=".EtatActivity"
+            android:exported="false" />
+        <activity
+            android:name=".updateBatScanActivity"
             android:exported="false"
-            android:label= "Mise à jour Batteries"
+            android:label="Mise à jour Batteries"
             android:parentActivityName=".MainActivity" />
         <activity
             android:name=".addBatActivity"
