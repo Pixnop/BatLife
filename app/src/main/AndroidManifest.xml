@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -13,14 +15,15 @@
         tools:targetApi="31">
         <activity
             android:name=".EtatActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".MainActivity" />
         <activity
-            android:name=".updateBatScanActivity"
+            android:name=".UpdateBatScanActivity"
             android:exported="false"
             android:label="Mise à jour Batteries"
             android:parentActivityName=".MainActivity" />
         <activity
-            android:name=".addBatActivity"
+            android:name=".AddBatActivity"
             android:exported="false"
             android:label="Ajout Batteries"
             android:parentActivityName=".MainActivity" />

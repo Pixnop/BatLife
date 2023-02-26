@@ -3,14 +3,11 @@ package leon.fievet.batlife;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
-
-import android.widget.Button;
 
 import com.journeyapps.barcodescanner.ScanContract;
 import com.journeyapps.barcodescanner.ScanOptions;
@@ -24,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void addBat(View v) {
-        Intent intent = new Intent(this, addBatActivity.class);
+        Intent intent = new Intent(this, AddBatActivity.class);
         startActivity(intent);
     }
 
@@ -33,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
         options.setPrompt("Volume up to flash on");
         options.setBeepEnabled(true);
         options.setOrientationLocked(true);
-        options.setCaptureActivity(updateBatScanActivity.class);
+        options.setCaptureActivity(UpdateBatScanActivity.class);
         barLaucher.launch(options);
     }
 
