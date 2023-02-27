@@ -1,4 +1,4 @@
-package leon.fievet.batlife;
+package leon.fievet.batlife.vue;
 
 import com.journeyapps.barcodescanner.CaptureActivity;
 

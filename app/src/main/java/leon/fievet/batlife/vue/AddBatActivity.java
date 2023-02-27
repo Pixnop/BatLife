@@ -1,4 +1,4 @@
-package leon.fievet.batlife;
+package leon.fievet.batlife.vue;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -24,6 +24,8 @@ import java.io.OutputStream;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 
+import leon.fievet.batlife.R;
+
 public class AddBatActivity extends AppCompatActivity {
 
 
@@ -35,15 +37,47 @@ public class AddBatActivity extends AppCompatActivity {
     }
 
     private ImageView qrCodeIV;
-    private EditText dataEdt;
+    private EditText marque;
+    private EditText modele;
+    private EditText type;
+    private EditText connectique;
+    private EditText capacite;
+    private EditText puissance;
+    private EditText autonomie;
+    private EditText prix;
+    private EditText poids;
+    private EditText taille;
+    private EditText nbCellules;
+
+
     Bitmap bitmap;
     BitMatrix bitMatrix ;
 
     public void addBat(View view) throws IOException, WriterException {
         qrCodeIV = findViewById(R.id.affichageQR);
-        dataEdt = findViewById(R.id.editTextBat);
+        marque = findViewById(R.id.marque);
+        modele = findViewById(R.id.modele);
+        type = findViewById(R.id.type);
+        connectique = findViewById(R.id.connectique);
+        capacite = findViewById(R.id.capacite);
+        puissance = findViewById(R.id.puissance);
+        autonomie = findViewById(R.id.autonomie);
+        prix = findViewById(R.id.prix);
+        poids = findViewById(R.id.poids);
+        taille = findViewById(R.id.taille);
+        nbCellules = findViewById(R.id.nbCellules);
 
-        String data = dataEdt.getText().toString();
+        String data = marque.getText().toString()
+                + modele.getText().toString()
+                + type.getText().toString()
+                + connectique.getText().toString()
+                + capacite.getText().toString()
+                + puissance.getText().toString()
+                + autonomie.getText().toString()
+                + prix.getText().toString()
+                + poids.getText().toString()
+                + taille.getText().toString()
+                + nbCellules.getText().toString();
 
         bitMatrix = new MultiFormatWriter().encode(data, BarcodeFormat.QR_CODE, 500, 500);
 

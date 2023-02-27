@@ -1,4 +1,4 @@
-package leon.fievet.batlife;
+package leon.fievet.batlife.vue;
 
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -11,6 +11,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.journeyapps.barcodescanner.ScanContract;
 import com.journeyapps.barcodescanner.ScanOptions;
+
+import leon.fievet.batlife.R;
 
 public class MainActivity extends AppCompatActivity {
 

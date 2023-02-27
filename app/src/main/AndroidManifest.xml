@@ -14,21 +14,21 @@
         android:theme="@style/Theme.BatLife"
         tools:targetApi="31">
         <activity
-            android:name=".EtatActivity"
+            android:name=".vue.EtatActivity"
             android:exported="false"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".vue.MainActivity" />
         <activity
-            android:name=".UpdateBatScanActivity"
+            android:name=".vue.UpdateBatScanActivity"
             android:exported="false"
             android:label="Mise à jour Batteries"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".vue.MainActivity" />
         <activity
-            android:name=".AddBatActivity"
+            android:name=".vue.AddBatActivity"
             android:exported="false"
             android:label="Ajout Batteries"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".vue.MainActivity" />
         <activity
-            android:name=".MainActivity"
+            android:name=".vue.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
